@@ -1,8 +1,7 @@
 "use client"
 
-import { ClerkLoaded, SignedIn, SignInButton, UserButton, useUser } from "@clerk/nextjs"
+import { ClerkLoaded, SignInButton, UserButton, useUser } from "@clerk/nextjs"
 import Link from "next/link";
-import Form from "next/form";
 import { SlBasket } from "react-icons/sl";
 import { useCartStore } from "@/store/cart-store";
 

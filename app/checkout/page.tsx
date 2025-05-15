@@ -8,7 +8,7 @@ import { checkoutAction } from "./checkout-action";
 
 export default function Checkoutpage() {
 
-  const { items, removeItem, addItem, clearCart } = useCartStore();
+  const { items, removeItem, addItem } = useCartStore();
   const total = items.reduce(
     (acc, item) => acc + item.price * item.quantity, 0
   );
@@ -30,7 +30,7 @@ export default function Checkoutpage() {
         </CardHeader>
         <CardContent>
            <ul className="space-y-4">
-            {items.map((item, key) => (
+            {items.map((item) => (
               <li key={item.id} className="flex flex-col gap-2 border-b pb-2">
                 <div className="flex justify-between">
                   <span className="font-medium"> {item.name} </span>
